@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    fetch('https://ipinfo.io/json').then((res) => {
+         res.json().then((data) => {         
+             if(data.country === "US"){
+                 window.location.href = './en-US/index.html';
+            }
+            else{
+                 window.location.href = "./en-US/index.html";
+            }
+         });
+     });
+ </script>

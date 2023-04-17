@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="ROOT personal website." />
+        <meta property="og:title" content="Home" />
+        <meta property="og:description" content="ROOT personal website." />
+        <meta property="og:image" content="./resources/icons/home-preview.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <link rel="stylesheet" href="theme.css">
+        <title>Home</title>
+        <link rel="icon" href="./resources/favicons/home.ico">
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a class="active" href="#"><img alt="" src="./resources/icons/home.png">Home</a></li>
+                <li><a href="about.html"><img alt="" src="./resources/icons/about.png">About</a></li>
+                <li><a href="contact.html"><img alt="" src="./resources/icons/contact.png">Contact</a></li>
+                <li style="float:right"><a target="_blank" rel="noopener noreferrer" href="https://github.com/root-120/roots-website"><img alt="" src="./resources/icons/github.png">GitHub</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Home</h1>
+            <h1><noscript>You need to enable JavaScript for this page to be able to work properly!</noscript></h1>
+            <p>Welcome!</p>
+            <p>This website is in development...</p>
+        </main>
+    </body>
+
+    <script>
+        window.onload = function () {
+            var pageTitle = document.title;
+            var attentionMessage = `Come back we miss you!`;
+            var blinkEvent = null;
+    
+            document.addEventListener('visibilitychange', function (e) {
+                var isPageActive = !document.hidden;
+    
+                if (!isPageActive) {
+                    blink();
+                } else {
+                    document.title = pageTitle;
+                    clearInterval(blinkEvent);
+                }
+            });
+    
+            function blink() {
+                blinkEvent = setInterval(function () {
+                    if (document.title === attentionMessage) {
+                        document.title = pageTitle;
+                    } else {
+                        document.title = attentionMessage;
+                    }
+                }, 100);
+            }
+        };
+    </script>
