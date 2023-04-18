@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="ROOT personal website." />
+        <meta property="og:title" content="Error 404" />
+        <meta property="og:image" content="https://notzozo.fr/resources/icons/home-preview.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en-US" />
+        <link rel="stylesheet" href="theme.css">
+        <title>Error 404</title>
+        <link rel="icon" href="./resources/favicons/home.ico">
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img alt="" src="./resources/icons/home.png">Home</a></li>
+                <li><a href="about.html"><img alt="" src="./resources/icons/about.png">About</a></li>
+                <li><a class="active" href="#"><img alt="" src="./resources/icons/contact.png">Contact</a></li>
+                <li style="float:right"><a target="_blank" rel="noopener noreferrer" href="https://github.com/root-120/roots-website"><img alt="" src="./resources/icons/github.png">GitHub</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Error 404</h1>
+            <h1><noscript>You need to enable JavaScript for this page to be able to work properly.</noscript></h1>
+            <p>The page you are trying to acess doesn't exist... You will be redirected to the home page in a few seconds!</p>
+        </main>
+
+        <script>
+        window.setTimeout(function(){
+            // Move to a new location or you can do something else
+            window.location.href = "index.html";
+        }, 5000);
+    </script>
+    </body>
